@@ -6,21 +6,32 @@ SigTracer provides a clone decomposition based on mutation signatures for one tu
 
 ## Quick start
 
+We have prepared Docker image file that completed the installation of SigTracer.
+You can easily download from https://hub.docker.com/repository/docker/taromss/sigtracer , and run the container with:
+
+```
+docker run -i taromss/sigtracer
+cd /root/SigTracer
+```
+
+If you use this Docker image, 
+
 ## Manual insatll
+
+You can install SigTracer in the local environment with the following procedure.
 
 ### Requirements
 SigTracer is implemented in C++ and Python 3.5 with some packages.
 
-For C++, you need the `Boost` package to calculate digamma and gamma functions.
+For C++, you need the **Boost** package to calculate digamma and gamma functions.
   
-According to your environment, please install the package from the official site ( https://www.boost.org/ ) and add the path to the compiler.
+According to your environment, please install the package following the official site ( https://www.boost.org/ ) and add the path to the compiler.
 
 For Python, you need some packages listed below:
 * numpy
 * scipy
-* subprocess
-* pickle
-* itertools
+* matplotlib
+* seaborn
 
 ### Compile
 clone the repository and execute the command:
