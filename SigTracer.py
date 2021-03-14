@@ -17,7 +17,7 @@ def main():
     result_path = ABS_path + "result/" + exp_name
     for sample_name in sample_names:
         os.makedirs(result_path + "/" + sample_name, exist_ok=True)
-    
+       
     arguments = []
     for sample_name in sample_names:
         for j in range(min_J, max_J + 1):
@@ -103,8 +103,8 @@ if __name__ == '__main__':
     exp_name = args[1]
     min_J = 1
     max_J = 4
-    max_run = 2
-    max_run_pe = 2
+    max_run = 3
+    max_run_pe = 3
 
     sample_names, purity = util.load_sample_names_and_purity(ABS_path, exp_name)
     ref_names = util.load_ref_sig(ABS_path, exp_name)
