@@ -10,7 +10,7 @@ We have prepared Docker image file that completed the installation of SigTracer.
 You can easily download from https://hub.docker.com/r/taromss/sigtracer , and run the container with:
 
 ```
-docker run -i taromss/sigtracer
+docker run -it taromss/sigtracer
 cd /root/SigTracer
 ```
 
