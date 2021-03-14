@@ -1,0 +1,8 @@
+S: 3
+mean_K: 3
+N: 2000
+J: 3
+CN_normal: 2
+read_counts_min: 50
+read_counts_max: 500
+rho_state: different
