@@ -45,7 +45,7 @@ def main():
     print("--------------------------------\n")
 
     best_r = sb.select_best_r(ABS_path, exp_name, best_j, max_run_pe)
-    file_foots = ["BB", "activity", "alpha", "elbo", "pi", "qC", "qU", "qUC", "qz", "qZU", "signature"]
+    file_foots = ["BB", "activity", "alpha", "elbo", "pi", "qC", "qU", "qUC", "qz", "qzU", "signature"]
     for s, sample_name in enumerate(sample_names):
         best_path = ABS_path + "result/" + exp_name + "/" + sample_name + "/suggested_solution"
         os.makedirs(best_path, exist_ok=True)
