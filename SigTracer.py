@@ -71,7 +71,7 @@ def main():
         run_with_true_J(exp_name, sample_names, true_J, ABS_path, ref_names, result_path)
         print("--------------------------------")
         print("Complete to evaluate simulation.")
-        print("--------------------------------")
+        print("--------------------------------\n")
 
 
 def execute(exp_name, sample_name, ABS_path, j, i, ref_sig, mode):
