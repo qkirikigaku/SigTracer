@@ -16,7 +16,7 @@ cd /root/SigTracer
 
 If you use this Docker image, following manual installation is not necessary at all.
 
-## Manual insatll
+## Manual installation
 
 You can install SigTracer in the local environment with the following procedure.
 
@@ -54,4 +54,60 @@ If your environment is capable to run with parallel core, you can easily paralle
 num_processes=8 # FIXME according to your environment.
 ```
 
-The execution result will be output to the `result` directory.
+The execution result will be output to the `result/example` directory.
+
+## Usage with an actual data
+
+### Input directory (`SigTracer/data`) structure
+
+```
+data
+├-- ref
+│    ├-- MT_SBS.txt
+│    └-- signature_probability_v3.1.csv
+└-- ${exp_name}
+       ├-- purity.csv
+       ├-- ref_sig.csv
+       ├-- ${sample_name1}.csv
+       ├-- ${sample_name2}.csv
+       ....
+       └-- ${sample_nameS}.csv
+```
+
+The directory, `data/${exp_name}`, have three types of files, `purity.csv`, `ref_sig.csv`, and `${sample_name}.csv` for each sample.
+
+* `purity.csv`
+
+It shows the purity, the proportion of the reads from cancer cells in all the sequenced reads, and it contains a header line and purity values for each sample:
+```
+Sample_name,purity
+${sample_name1},0.95
+${sample_name2},0.80
+.....
+${sample_nameS},0.88
+```
+
+* `ref_sig.csv`
+
+It shows the signature active in each sample:
+```
+${sample_name1},SBS1,SBS5,SBS9,SBS40
+${sample_name2},SBS1,SBS5,SBS40
+.....
+${sample_nameS},SBS1,SBS5,SBS9,SBS40
+```
+
+* `${sample_name}.csv`
+
+For one sample, namely ${sample_name}, all the mutations are listed in this file:
+```
+mutation_id,chromosome,position,ref_counts,var_counts,normal_cn,minor_cn,mut_cn,major_cn,total_cn,trinucleotide,signature,clone
+mut_1,1,5,151,31,2,1,1,1,2,15,SBS10a,1
+mut_2,1,10,161,24,2,1,1,1,2,42,SBS10a,1
+.....
+mut_N,1,10000,123,41,2,1,1,2,3,15,SBS10a,0
+```
+
+With the actual sequenced data, since we do not know the values of `mut_cn`, `signature` and `clone`, please fill in the zeros as needed (these values are only used for evaluation with the simulation data).
+
+### Running SigTracer
