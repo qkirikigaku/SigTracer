@@ -34,7 +34,7 @@ For Python, you need some packages listed below:
 * seaborn
 
 ### Compile
-clone the repository and execute the command:
+lone the repository and execute the command:
 ```
 git clone https://github.com/qkirikigaku/SigTracer
 cd SigTracer
