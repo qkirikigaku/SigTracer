@@ -1,6 +1,6 @@
 import os
 ABS_path = os.getcwd() + "/" # FIXME according to your environment.
-num_processes=8 # FIXME according to your environment.
+num_processes=1 # FIXME according to your environment.
 Simulation_flag = True # FIXME to change "False" when applying an actual data.
 
 import sys
