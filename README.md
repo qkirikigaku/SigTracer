@@ -14,7 +14,7 @@ docker run -i taromss/sigtracer
 cd /root/SigTracer
 ```
 
-If you use this Docker image, 
+If you use this Docker image, following manual installation is not necessary at all.
 
 ## Manual insatll
 
