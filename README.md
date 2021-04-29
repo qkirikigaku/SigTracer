@@ -75,6 +75,7 @@ data
 ```
 
 The directory, `data/${exp_name}`, have three types of files, `purity.csv`, `ref_sig.csv`, and `${sample_name}.csv` for each sample.
+Please refer to `data/example_real` directory as an example of acutal sequenced data, and the directory includes:
 
 * `purity.csv`
 
@@ -101,13 +102,14 @@ ${sample_nameS},SBS1,SBS5,SBS9,SBS40
 
 For one sample, namely ${sample_name}, all the mutations are listed in this file:
 ```
-mutation_id,chromosome,position,ref_counts,var_counts,normal_cn,minor_cn,mut_cn,major_cn,total_cn,trinucleotide,signature,clone
-mut_1,1,5,151,31,2,1,1,1,2,15,SBS10a,1
-mut_2,1,10,161,24,2,1,1,1,2,42,SBS10a,1
+mutation_id,chromosome,position,ref_counts,var_counts,normal_cn,minor_cn,mut_cn,major_cn,total_cn,trinucleotide,annotation
+mut_1,1,5,151,31,2,1,1,1,2,15,other-11
+mut_2,1,10,161,24,2,1,1,1,2,42,SBS10a,other-38
 .....
-mut_N,1,10000,123,41,2,1,1,2,3,15,SBS10a,0
+mut_N,1,10000,123,41,2,1,1,2,3,15,SBS10a,other-40
 ```
 
-With the actual sequenced data, since we do not know the values of `mut_cn`, `signature` and `clone`, please fill in the zeros as needed (these values are only used for evaluation with the simulation data).
+With the actual sequenced data, since we do not know the values of `mut_cn`, please fill in the zeros as needed (these values are only used for evaluation with the simulation data).
+`annotation` column shows the mutated region for each mutation, and we listed non-existent gene names as examples here.
 
 ### Running SigTracer
