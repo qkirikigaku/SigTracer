@@ -58,6 +58,8 @@ The execution result will be output to the `result/example` directory.
 
 ## Usage with an actual data
 
+You should prepare the following input directry.
+
 ### Input directory (`SigTracer/data`) structure
 
 ```
