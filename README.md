@@ -105,10 +105,10 @@ ${sample_nameS},SBS1,SBS5,SBS9,SBS40
 For one sample, namely ${sample_name}, all the mutations are listed in this file:
 ```
 mutation_id,chromosome,position,ref_counts,var_counts,normal_cn,minor_cn,mut_cn,major_cn,total_cn,trinucleotide,annotation
-mut_1,1,5,151,31,2,1,1,1,2,15,other-11
-mut_2,1,10,161,24,2,1,1,1,2,42,SBS10a,other-38
+mut_2,1,10,56,2,2,1,1,2,3,10,SBS13-target
+mut_3,1,15,275,62,2,1,1,2,3,9,SBS18-target
 .....
-mut_N,1,10000,123,41,2,1,1,2,3,15,SBS10a,other-40
+mut_2000,1,10000,81,3,2,1,1,1,2,38,SBS14-target
 ```
 
 With the actual sequenced data, since we do not know the values of `mut_cn`, please fill in the zeros as needed (these values are only used for evaluation with the simulation data).
@@ -116,3 +116,27 @@ With the actual sequenced data, since we do not know the values of `mut_cn`, ple
 `annotation` column shows the mutated region for each mutation, and we listed non-existent gene names as examples here.
 
 ### Running SigTracer
+Before running SigTracer, please fix the corresponding line in `SigTracer.py` to change to the mode for acutal data as following:
+```
+Simulation_flag = False # FIXME to change "False" when applying an actual data.
+```
+
+Using inputs in `data/example_real`, execute the following command resulting in parameter estimation:
+```
+python SigTracer.py example_real
+```
+Note that `data/example_real` includes 100 artificial samples, so it may take a lot of time.
+For this reason, we recommend running the program in an environment where massively parallel computing is possible.
+
+As is the above simulation, the execution result will be output to the `result/example_real` directory.
+
+### Statistical test for measuring the relationship between mutations and signatures
+Detailed information is described in our original paper:, you can extract the mutations related with certain signatures.
+
+After parameter estimation with the above procedure, run the following command:
+
+```
+python TestClone.py example_real
+```
+
+The result will be output to the `result/example_real/tables/summary/test_mutation.tsv`.
