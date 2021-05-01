@@ -112,6 +112,7 @@ mut_N,1,10000,123,41,2,1,1,2,3,15,SBS10a,other-40
 ```
 
 With the actual sequenced data, since we do not know the values of `mut_cn`, please fill in the zeros as needed (these values are only used for evaluation with the simulation data).
+`normal_cn` and `major_cn` is necessary for prediction, and they should be estimated by other tools and filled with estimators.
 `annotation` column shows the mutated region for each mutation, and we listed non-existent gene names as examples here.
 
 ### Running SigTracer
