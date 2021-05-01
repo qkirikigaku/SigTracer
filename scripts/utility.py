@@ -107,9 +107,8 @@ def load_ref_sig_simulation(ABS_path, exp_name):
 
 
 def load_all_sig_names(ABS_path):
-    reader = csv.reader(open(ABS_path + "raw_data/PCAWG_sigProfiler_SBS_signatures_in_samples.csv",
-                "r"))
-    temp_list = [line for line in reader][0][3:]
+    reader = csv.reader(open(ABS_path + "data/ref/signature_probability_v3.1.csv","r"))
+    temp_list = [line for line in reader][0][2:]
     return temp_list
 
 
