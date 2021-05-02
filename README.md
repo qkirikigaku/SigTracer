@@ -84,20 +84,20 @@ Please refer to `data/example_real` directory as an example of acutal sequenced 
 It shows the purity, the proportion of the reads from cancer cells in all the sequenced reads, and it contains a header line and purity values for each sample:
 ```
 Sample_name,purity
-${sample_name1},0.95
-${sample_name2},0.80
+${sample_name1},0.9929135909899457
+${sample_name2},0.9934101600184388
 .....
-${sample_nameS},0.88
+${sample_nameS},0.5705353718426889
 ```
 
 * `ref_sig.csv`
 
 It shows the signature active in each sample:
 ```
-${sample_name1},SBS1,SBS5,SBS9,SBS40
-${sample_name2},SBS1,SBS5,SBS40
+${sample_name1},SBS5,SBS7a,SBS7c,SBS8,SBS9,SBS10a,SBS10b
+${sample_name2},SBS3,SBS6,SBS7a
 .....
-${sample_nameS},SBS1,SBS5,SBS9,SBS40
+${sample_nameS},SBS1,SBS3,SBS4,SBS5,SBS6,SBS7a,SBS9,SBS10a
 ```
 
 * `${sample_name}.csv`
@@ -105,10 +105,10 @@ ${sample_nameS},SBS1,SBS5,SBS9,SBS40
 For one sample, namely ${sample_name}, all the mutations are listed in this file:
 ```
 mutation_id,chromosome,position,ref_counts,var_counts,normal_cn,minor_cn,mut_cn,major_cn,total_cn,trinucleotide,annotation
-mut_2,1,10,56,2,2,1,1,2,3,10,SBS13-target
-mut_3,1,15,275,62,2,1,1,2,3,9,SBS18-target
+mut_1,1,5,257,21,2,1,1,2,3,61,SBS59-target
+mut_2,1,10,224,87,2,0,1,4,4,44,SBS13-target
 .....
-mut_2000,1,10000,81,3,2,1,1,1,2,38,SBS14-target
+mut_2000,1,10000,64,13,2,1,1,1,2,51,SBS17b-target
 ```
 
 With the actual sequenced data, since we do not know the values of `mut_cn`, please fill in the zeros as needed (these values are only used for evaluation with the simulation data).
