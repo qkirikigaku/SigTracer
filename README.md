@@ -6,11 +6,12 @@ SigTracer provides a clone decomposition based on mutation signatures for one tu
 
 ## Quick start
 
-We have prepared Dockerfile to conduct the installation of SigTracer.
+We prepared Dockerfile to conduct all the installation.
 Run the following command:
 
 ```
 git clone https://github.com/qkirikigaku/SigTracer
+cd SigTracer
 docker build -t sigtracer ./
 docker run -it sigtracer
 ```
