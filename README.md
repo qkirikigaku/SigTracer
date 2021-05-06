@@ -11,6 +11,7 @@ Run the following command:
 
 ```
 git clone https://github.com/qkirikigaku/SigTracer
+cd SigTracer
 docker build -t sigtracer ./
 docker run -it sigtracer
 ```
