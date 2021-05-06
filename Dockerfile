@@ -12,3 +12,4 @@ RUN git clone https://github.com/qkirikigaku/SigTracer
 WORKDIR /root/SigTracer
 RUN  make compile_docker
 
+RUN echo 'alias python="python3"' >> ~/.bashrc
