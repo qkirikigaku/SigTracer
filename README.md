@@ -6,15 +6,16 @@ SigTracer provides a clone decomposition based on mutation signatures for one tu
 
 ## Quick start
 
-We have prepared Docker image file that completed the installation of SigTracer.
-You can easily download from https://hub.docker.com/r/taromss/sigtracer , and run the container with:
+We have prepared Dockerfile to conduct the installation of SigTracer.
+Run the following command:
 
 ```
-docker run -it taromss/sigtracer
-cd /root/SigTracer
+git clone https://github.com/qkirikigaku/SigTracer
+docker build -t sigtracer ./
+docker run -it sigtracer
 ```
 
-If you use this Docker image, following manual installation is not necessary at all.
+If you use this Dockerfile and your virtual environment, following manual installation is not necessary at all.
 
 ## Manual installation
 
