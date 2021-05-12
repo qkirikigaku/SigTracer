@@ -4,6 +4,8 @@ SigTracer provides a clone decomposition based on mutation signatures for one tu
 
 ![sample-1_clone](https://user-images.githubusercontent.com/26032572/111058359-73c12080-84d1-11eb-9b54-2bdeb1af945f.png)
 
+Please refer to our paper: [Clone decomposition based on mutation signatures provides novel insights into mutational processes](https://www.biorxiv.org/content/10.1101/2021.05.08.443215v1) for more detailed information.
+
 ## Quick start
 
 We prepared Dockerfile to conduct all the installation.
@@ -133,7 +135,7 @@ For this reason, we recommend running the program in an environment where massiv
 As is the above simulation, the execution result will be output to the `result/example_real` directory.
 
 ### Statistical test for measuring the relationship between mutations and signatures
-Detailed information is described in our original paper:, you can extract the mutations related with certain signatures.
+You can extract the mutations related with certain signatures.
 
 After parameter estimation with the above procedure, run the following command:
 
