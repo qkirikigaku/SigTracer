@@ -4,7 +4,7 @@ SigTracer provides a clone decomposition based on mutation signatures for one tu
 
 ![sample-1_clone](https://user-images.githubusercontent.com/26032572/111058359-73c12080-84d1-11eb-9b54-2bdeb1af945f.png)
 
-Please refer to our paper: [Clone decomposition based on mutation signatures provides novel insights into mutational processes](https://www.biorxiv.org/content/10.1101/2021.05.08.443215v1) for more detailed information.
+Please refer to our paper: [Clone decomposition based on mutation signatures provides novel insights into mutational processes](https://academic.oup.com/nargab/article/3/4/lqab093/6415102) for more detailed information.
 
 ## Quick start
 
